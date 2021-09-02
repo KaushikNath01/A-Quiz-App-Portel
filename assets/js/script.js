@@ -171,7 +171,6 @@ function showNameInput(){
      device_h1_mobile.innerHTML = showInDeviceH;
      device_h1_tablet.innerHTML = showInDeviceH;
      device_h1_desktop.innerHTML = showInDeviceH;
-     increaseLength();
 }
 
 function increaseLength() {

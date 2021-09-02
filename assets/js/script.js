@@ -46,6 +46,7 @@ mobile.addEventListener('click',show_mobile_preview);
 tablet.addEventListener('click',show_tablet_preview);
 desktop.addEventListener('click',show_desktop_preview);
 nameInput.addEventListener('input', showNameInput);
+nameInput.addEventListener('keyup', increaseLength);
 descInput.addEventListener('input',showDescInput);
 showForView.addEventListener('click', show_For_View);
 showForResponse.addEventListener('click', show_For_Response);
@@ -170,6 +171,11 @@ function showNameInput(){
      device_h1_mobile.innerHTML = showInDeviceH;
      device_h1_tablet.innerHTML = showInDeviceH;
      device_h1_desktop.innerHTML = showInDeviceH;
+     increaseLength();
+}
+
+function increaseLength() {
+    console.log('increase');
 }
 function showDescInput(){
      const showDescDeviceH = descInput.value;

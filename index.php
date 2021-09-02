@@ -278,6 +278,7 @@
 </body>
        <?php 
             include './connect.php'; 
+        ?>
       <script src="./assets/js/script.js"></script>
       
 </html>

@@ -14,7 +14,6 @@ const mobile_preview = document.querySelector('.mobile');
 const tablet_preview = document.querySelector('.tablet');
 const desktop_preview = document.querySelector('.desktop');
 const nameInput = document.querySelector('.name');
-const nameInputId = document.querySelector('#nameInputId');
 const descInput = document.querySelector('.desc');
 const device_h1_mobile = document.querySelector('.device_h1_input_mobile');
 const device_h1_tablet = document.querySelector('.device_h1_input_tablet');
@@ -37,6 +36,8 @@ const form_send_btn = document.querySelector('.formBtn');
 const name_error = document.querySelector('#name_error');
 const desc_error = document.querySelector('#desc_error');
 const startBtn = document.querySelector('.start_btn');
+const current = document.querySelector('#current');
+const current2 = document.querySelector('#current2');
 
 
 qBtn.addEventListener('click', displayMenuOptions);
@@ -53,8 +54,17 @@ showForResponse.addEventListener('click', show_For_Response);
 showForQuestion.addEventListener('click', show_For_Question);
 form_send_btn.addEventListener('click', validate_JS_Form);
 startBtn.addEventListener('click', startBtnDevices);
-nameInputId.addEventListener('keyup', () => {
-    console.log('up');
+
+// input count increment
+
+nameInput.addEventListener('input', () => { 
+    let valKey = nameInput.value.length;
+    current.innerHTML = valKey;
+})
+
+description.addEventListener('input', () => {
+    let valKey = description.value.length;
+    current2.innerHTML = valKey;
 })
 
 function openBuildPen(){

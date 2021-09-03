@@ -50,10 +50,10 @@
                                           </div>
                                           <div class="input-desc">
                                               <label style="color:white" for="desc">Description*</label><br>
-                                              <input name="description" type="text" class="desc" required autofocus maxlength="300">
+                                              <input name="description" type="text" class="desc" required autofocus maxlength="150">
                                               <div style="display:flex; justify-content:flex-end; color:white; padding:2px 0px" id="the_count_two">
-                                                      <span id="current">0</span>
-                                                      <span id="maximum">/ 300</span>
+                                                      <span id="current2">0</span>
+                                                      <span id="maximum">/ 150</span>
                                               </div>
                                               <small id="desc_error" class="error"></small>
                                           </div>
@@ -247,7 +247,7 @@
                      </div>
                      <div class="show_devices_on_screen">
                             <div class="mobile hide_devices">
-                                    <img src="./assets/img/mobile_preview.png" alt="">
+                                    <img src="./assets/img/mobile_preview.png" class="tablet_img" alt="">
                                     <div class="device_queries for_mobile">
                                            <h1 class="device_h1_input_mobile"></h1>
                                            <p class="device_p_input_mobile"></p>

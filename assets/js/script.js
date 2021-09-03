@@ -14,6 +14,7 @@ const mobile_preview = document.querySelector('.mobile');
 const tablet_preview = document.querySelector('.tablet');
 const desktop_preview = document.querySelector('.desktop');
 const nameInput = document.querySelector('.name');
+const nameInputId = document.querySelector('#nameInputId');
 const descInput = document.querySelector('.desc');
 const device_h1_mobile = document.querySelector('.device_h1_input_mobile');
 const device_h1_tablet = document.querySelector('.device_h1_input_tablet');
@@ -46,13 +47,15 @@ mobile.addEventListener('click',show_mobile_preview);
 tablet.addEventListener('click',show_tablet_preview);
 desktop.addEventListener('click',show_desktop_preview);
 nameInput.addEventListener('input', showNameInput);
-nameInput.addEventListener('keyup', increaseLength);
 descInput.addEventListener('input',showDescInput);
 showForView.addEventListener('click', show_For_View);
 showForResponse.addEventListener('click', show_For_Response);
 showForQuestion.addEventListener('click', show_For_Question);
 form_send_btn.addEventListener('click', validate_JS_Form);
 startBtn.addEventListener('click', startBtnDevices);
+nameInputId.addEventListener('keyup', () => {
+    console.log('up');
+})
 
 function openBuildPen(){
     builderPage.style.display = 'block';
@@ -173,9 +176,7 @@ function showNameInput(){
      device_h1_desktop.innerHTML = showInDeviceH;
 }
 
-function increaseLength() {
-    console.log('increase');
-}
+
 function showDescInput(){
      const showDescDeviceH = descInput.value;
      device_p_mobile.innerHTML = showDescDeviceH;
@@ -201,7 +202,7 @@ function show_new_page_content(){
             connDiv.style.backgroundColor = "rgb(236, 234, 234)";
             connDiv.style.height = '110px';
             connDiv.style.width = '234px';
-            connDiv.style.margin = '0px 0px 0px 6px';
+            connDiv.style.margin = '0px 0px 0px 3px';
             const connH1 = document.createElement('h1');
             connH1.classList.add('conn_h1');
             connH1.innerHTML = showInDevicee;

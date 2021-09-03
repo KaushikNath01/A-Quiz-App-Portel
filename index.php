@@ -41,7 +41,7 @@
                                   <div class="input-elements">
                                           <div class="input-name">
                                               <label style="color:white" for="title">Title*</label><br>
-                                              <input name="username" type="text" class="name" required style="max-width:25;" autofocus maxlength="25">
+                                              <input name="username" type="text" class="name" id="nameInputId" required style="max-width:25;" autofocus maxlength="25">
                                               <div style="display:flex; justify-content:flex-end; color:white; padding:2px 0px" id="the_count">
                                                       <span id="current">0</span>
                                                       <span id="maximum">/ 25</span>
@@ -61,7 +61,7 @@
                              </form>
                        </div>
                        <div class="cta-add_question now">
-                              <button class="addQBtn">+ Add Question</button>
+                              <button class="addQBtn" style="margin-top:29px;">+ Add Question</button>
                        </div>
                        <!-- <div class="hidden-hover-btn now" style="display:none;">
                               <button class="hidden-q-btn">+</button>
@@ -267,7 +267,13 @@
                                      </div>
                             </div>
                      </div>
-                     <div class="new_content_shown" style="position:absolute; display:grid; place-content:center; margin-top:220px; margin-left:160px; width:150px; word-break:break-all; text-align:center; font-size:12px; font-weight:bold">
+                     <div class="new_content_shown" style="position:absolute; display:grid; place-content:center;
+                        margin-left: auto;
+                        margin-right: auto;
+                        left: 0;
+                        right: 0;
+                        margin-top:240px;
+                        text-align: center; width:50%; word-break:break-all; text-align:center; font-size:12px; font-weight:bold">
                            <div class="new_content_wrapper"></div>
                      </div>
                      <div class="start-btn">

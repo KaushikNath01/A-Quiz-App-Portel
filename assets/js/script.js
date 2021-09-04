@@ -11,6 +11,9 @@ const mobile = document.querySelector('.responsive_devices > .mobile_icon');
 const tablet = document.querySelector('.responsive_devices > .tablet_icon');
 const desktop = document.querySelector('.responsive_devices > .desktop_icon');
 const mobile_preview = document.querySelector('.mobile');
+const mobile_icon = document.querySelector('.mobile_icon');
+const tablet_icon = document.querySelector('.tablet_icon');
+const desktop_icon = document.querySelector('.desktop_icon');
 const tablet_preview = document.querySelector('.tablet');
 const desktop_preview = document.querySelector('.desktop');
 const nameInput = document.querySelector('.name');
@@ -38,6 +41,10 @@ const desc_error = document.querySelector('#desc_error');
 const startBtn = document.querySelector('.start_btn');
 const current = document.querySelector('#current');
 const current2 = document.querySelector('#current2');
+const box3 = document.querySelector('.box-3');
+const box4 = document.querySelector('.box-4');
+const cancelBox3 = document.querySelector('.cancel_btn');
+const previewBtn = document.querySelector('.preview_hideShow');
 
 
 qBtn.addEventListener('click', displayMenuOptions);
@@ -54,6 +61,16 @@ showForResponse.addEventListener('click', show_For_Response);
 showForQuestion.addEventListener('click', show_For_Question);
 form_send_btn.addEventListener('click', validate_JS_Form);
 startBtn.addEventListener('click', startBtnDevices);
+
+cancelBox3.addEventListener('click', () => {
+    box3.style.display = 'none';
+    box4.style.display = 'block';
+})
+
+previewBtn.addEventListener('click', (e) =>{
+    box3.style.display = 'block';
+    box4.style.display = 'none';
+})
 
 // input count increment
 
@@ -161,18 +178,27 @@ function showShortAnswer(){
 
 function show_mobile_preview(){
     mobile_preview.classList.remove('hide_devices');
+    mobile_icon.style.color = 'rgb(53, 118, 204';
+    tablet_icon.style.color = '';
+    desktop_icon.style.color = '';
     tablet_preview.classList.add('hide_devices');
     desktop_preview.classList.add('hide_devices');
 }
 
 function show_tablet_preview(){
     tablet_preview.classList.remove('hide_devices');
+    mobile_icon.style.color = '';
+    tablet_icon.style.color = 'rgb(53, 118, 204';
+    desktop_icon.style.color = '';
     mobile_preview.classList.add('hide_devices');
     desktop_preview.classList.add('hide_devices')
 }
 
 function show_desktop_preview(){
     desktop_preview.classList.remove('hide_devices');
+    mobile_icon.style.color = '';
+    tablet_icon.style.color = '';
+    desktop_icon.style.color = 'rgb(53, 118, 204';
     tablet_preview.classList.add('hide_devices');
     mobile_preview.classList.add('hide_devices');
 }
@@ -195,9 +221,13 @@ function showDescInput(){
 }
 
 function startBtnDevices(clicked){
-    const hideDeviceContents = document.querySelector('.device_queries');
+    const hideDeviceContentsMobile = document.querySelector('.for_mobile');
+    const hideDeviceContentsTablet = document.querySelector('.for_tablet');
+    const hideDeviceContentsDesktop = document.querySelector('.for_desktop');
     if(clicked){
-        hideDeviceContents.style.display = 'none';
+        hideDeviceContentsMobile.style.display = 'none';
+        hideDeviceContentsTablet.style.display = 'none';
+        hideDeviceContentsDesktop.style.display = 'none';
         startBtn.style.display = 'none';
         show_new_page_content();
     }
@@ -205,14 +235,12 @@ function startBtnDevices(clicked){
 const mainNewContentContainer = document.querySelector(".new_content_wrapper");
 function show_new_page_content(){
     const showInDevicee = nameInput.value;
-    const showDescDevicee = descInput.value;
-            // console.log('content-shown');
             const connDiv = document.createElement('div');
             connDiv.classList.add('conn_div');
-            connDiv.style.backgroundColor = "rgb(236, 234, 234)";
+            connDiv.style.boxShadow = '5px 10px 18px #888888';
             connDiv.style.height = '110px';
             connDiv.style.width = '234px';
-            connDiv.style.margin = '0px 0px 0px 3px';
+            connDiv.style.margin = '0px 0px 0px 2px';
             const connH1 = document.createElement('h1');
             connH1.classList.add('conn_h1');
             connH1.innerHTML = showInDevicee;
@@ -221,11 +249,6 @@ function show_new_page_content(){
             connH1.style.padding = '10px 0px 0px 0px';
             connH1.style.fontSize = '16px';
             connDiv.appendChild(connH1);
-            const connP = document.createElement('p');
-            connP.classList.add('conn_p');
-            connP.innerHTML = showDescDevicee;
-            connP.style.margin = '5px 0px 15px 0px';
-            connDiv.appendChild(connP);
             const submitBtn = document.createElement('button');
             submitBtn.classList.add('submit_btn');
             submitBtn.innerHTML = "Submit";

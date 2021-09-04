@@ -254,8 +254,8 @@
                                     </div>
                             </div>
                             <div class="tablet hide_devices">
-                                    <img src="https://surveyheart.com/images/preview_tablet_skin.svg" alt="">
-                                    <div class="device_queries for_tablet">
+                                    <img src="./assets/img/tablet-vector-skin.jpg" class="tablet-skin" alt="" style="height:500px; width:280px">
+                                    <div class="device_queries for_tablet" style="word-break:break-all">
                                            <h1 class="device_h1_input_tablet"></h1>
                                            <p class="device_p_input_tablet"></p>
                                     </div>
@@ -279,6 +279,11 @@
                      <div class="start-btn">
                             <button class="start_btn">START</button>
                      </div>
+              </div>
+              <div class="box-4 show_preview">
+                            <button class="preview_hideShow">
+                                    <h1>Preview</h1>
+                            </button>
               </div>
       </div> 
 </body>
